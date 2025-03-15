@@ -1175,3 +1175,215 @@ img {
   }
 }
 
+/* Add these improved responsive styles at the end of your CSS file */
+
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-icon {
+    left: 30px;
+    transform: translateX(0);
+  }
+
+  .timeline-content {
+    width: calc(100% - 80px);
+    left: 80px !important;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content::before,
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -15px;
+    border-color: transparent white transparent transparent;
+    right: auto;
+  }
+  
+  /* Improved problem cards layout */
+  .problem-cards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Fix for the prize cards */
+  .prizes-container {
+    gap: 1rem;
+  }
+  
+  .prize-card {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 999;
+    padding: 2rem 0;
+    overflow-y: auto; /* Allow scrolling on mobile menu */
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .slogan {
+    font-size: 1.2rem;
+  }
+
+  .prize-card.first {
+    transform: scale(1);
+  }
+
+  .prizes-container {
+    align-items: center;
+  }
+  
+  /* Fix for the problem cards on mobile */
+  .problem-card[data-problem="5"],
+  .problem-card[data-problem="6"] {
+    grid-column: auto;
+    width: 100%;
+    margin: 0;
+  }
+  
+  /* Improve contact cards layout */
+  .contact-cards {
+    gap: 1.5rem;
+  }
+  
+  .contact-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Fix footer layout */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    align-items: center;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 2rem;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Improve problem cards layout on small screens */
+  .problem-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .problem-card {
+    width: 100%;
+  }
+  
+  /* Fix prize cards on small screens */
+  .prizes-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .prize-card {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  /* Fix modal content on small screens */
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 10% auto;
+  }
+  
+  /* Fix timeline on small screens */
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  /* Fix navbar on small screens */
+  .navbar {
+    padding: 0.8rem 5%;
+  }
+  
+  .logo-placeholder {
+    width: 120px;
+    height: 80px;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 375px) {
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+}
