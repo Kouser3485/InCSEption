@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Data Visualization – Web dashboard displaying real-time noise maps, trends, and historical insights of monitored areas.",
       "Alerts & Reports – Notify authorities & the public when limits exceed with noise analysis reports.",
       "Public Reporting – Citizens in key areas can report high noise levels via the website.",
-      "NOTE: Authorities to Notify (via email or official websites) are KSPCB – Monitors and regulates environmental noise pollution ,BTP – Handles traffic-related noise violations (e.g., honking) , BBMP – Public Health & Environment Dept.** – Manages construction & public noise."
+      "NOTE: Authorities to Notify (via email or official websites) are KSPCB – Monitors and regulates environmental noise pollution ,BTP – Handles traffic-related noise violations (e.g., honking) , BBMP – Public Health & Environment Dept.** – Manages construction & public noise.",
     ],
   },
   {
