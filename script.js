@@ -384,6 +384,32 @@ document.addEventListener("DOMContentLoaded", () => {
           "Report Generation – Provide a downloadable deepfake analysis report with reasoning.",
         ],
       },
+    {
+    id: 8,
+    title: "IoT-Based Noise Pollution Monitoring & Analysis System",
+    subtitle: "Real-time noise tracking for public awareness & authority alerts",
+    description:
+      "Bangalore faces rising noise pollution due to urbanization, traffic, and construction. Excessive noise impacts public health, yet real-time monitoring is lacking. This challenge asks participants to develop an IoT-based noise monitoring system that tracks, analyzes, and notifies both the public and authorities when noise crosses safe limits.",
+    goals: [
+      "Real-Time Monitoring – Deploy IoT noise sensors in key areas (traffic hotspots, construction zones, residential areas).",
+      "Data Visualization – Web dashboard displaying real-time noise maps, trends, and historical insights of monitored areas.",
+      "Alerts & Reports – Notify authorities & the public when limits exceed with noise analysis reports.",
+      "Public Reporting – Citizens in key areas can report high noise levels via the website.",
+      "NOTE: Authorities to Notify (via email or official websites) are KSPCB – Monitors and regulates environmental noise pollution ,BTP – Handles traffic-related noise violations (e.g., honking) , BBMP – Public Health & Environment Dept.** – Manages construction & public noise."
+    ],
+  },
+  {
+    id: 9,
+    title: "Open Innovation Challenge",
+    subtitle: "Propose your own groundbreaking tech solution!",
+    description:
+      "This challenge is for those who want to **think outside the box!** If you have an innovative idea that doesn't fit into any listed categories, here’s your chance to pitch and build it.",
+    goals: [
+      "Originality – Your idea should be unique and solve a real-world problem.",
+      "Feasibility – It should be practical, scalable, and impactful.",
+      "Execution – Present a working prototype or proof of concept.",
+    ],
+  },
     ]
   
     // Open modal when a View Details button is clicked
