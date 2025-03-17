@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Data Visualization – Web dashboard displaying real-time noise maps, trends, and historical insights of monitored areas.",
       "Alerts & Reports – Notify authorities & the public when limits exceed with noise analysis reports.",
       "Public Reporting – Citizens in key areas can report high noise levels via the website.",
-      "NOTE: Authorities to Notify (via email or official websites) are KSPCB – Monitors and regulates environmental noise pollution ,BTP – Handles traffic-related noise violations (e.g., honking) , BBMP – Public Health & Environment Dept.** – Manages construction & public noise.",
+      "NOTE: Authorities to Notify (via email or official websites) are KSPCB – Monitors and regulates environmental noise pollution ,BTP – Handles traffic-related noise violations , BBMP – Public Health & Environment Dept – Manages construction & public noise.",
     ],
   },
   {
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
     title: "Open Innovation Challenge",
     subtitle: "Propose your own groundbreaking tech solution!",
     description:
-      "This challenge is for those who want to **think outside the box!** If you have an innovative idea that doesn't fit into any listed categories, here’s your chance to pitch and build it.",
+      "This challenge is for those who want to think outside the box! If you have an innovative idea that doesn't fit into any listed categories, here’s your chance to pitch and build it.",
     goals: [
       "Originality – Your idea should be unique and solve a real-world problem.",
       "Feasibility – It should be practical, scalable, and impactful.",
