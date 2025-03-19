@@ -746,6 +746,168 @@ img {
 }
 
 /* Prizes Section */
+/* Add these styles to your existing styles.css file */
+
+/* Prize Pool Styles */
+.prize-pool {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.prize-pool-amount {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.prize-currency {
+  font-size: 2.5rem;
+  margin-right: 0.25rem;
+}
+
+.prize-pool-text {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Year Selector Styles */
+.year-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.year-btn {
+  background-color: white;
+  border: 2px solid transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.year-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.year-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Updated Prize Card Styles */
+.prizes-container {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.prizes-container.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.prizes-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.prize-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.prize-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 0;
+}
+
+.prize-card:hover {
+  transform: translateY(-15px);
+}
+
+.prize-card.first:hover {
+  transform: scale(1.1) translateY(-15px);
+}
+
+.trophy-glow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.prize-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .prize-pool-amount {
+    font-size: 2.5rem;
+  }
+
+  .prize-currency {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .year-selector {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .year-btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
 .prizes-section {
   padding: 6rem 0;
 }
