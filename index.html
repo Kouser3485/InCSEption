@@ -182,7 +182,7 @@
           </div>
           <div class="timeline-content">
             <h3>Registration Opens</h3>
-            <p class="date">March 15-20, 2025</p>
+            <p class="date">March 15-21, 2025</p>
             <p>Begin your journey by registering for the hackathon</p>
           </div>
         </div>
@@ -193,7 +193,7 @@
           </div>
           <div class="timeline-content">
             <h3>Idea Submission</h3>
-            <p class="date">March 16-19, 2025</p>
+            <p class="date">March 16-21, 2025</p>
             <p>Submit your innovative ideas and solutions</p>
           </div>
         </div>
@@ -204,7 +204,7 @@
           </div>
           <div class="timeline-content">
             <h3>Shortlisted Teams Announcement(TOP 50)</h3>
-            <p class="date">March 21, 2025</p>
+            <p class="date">March 22, 2025</p>
             <p>Selected teams will be notified</p>
           </div>
         </div>
@@ -235,37 +235,75 @@
   </section>
 
   <!-- Prizes Section -->
-  <section id="prizes" class="prizes-section">
-    <div class="container">
-      <h2 class="section-title">Prizes</h2>
-      <div class="prizes-container">
-        <div class="prize-card second">
-          <div class="trophy">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <h3>2nd Prize</h3>
-          <div class="prize-amount">To be Revealed</div>
+ <!-- Replace the existing prizes section with this HTML -->
+<section id="prizes" class="prizes-section">
+  <div class="container">
+    <h2 class="section-title">Prizes</h2>
+    
+    <div class="prize-pool">
+      <div class="prize-pool-amount">
+        <span class="prize-currency">₹</span>
+        <span class="prize-value">27,000</span>
+      </div>
+      <p class="prize-pool-text">Total Prize Pool</p>
+    </div>
+    
+    <div class="year-selector">
+      <button class="year-btn active" data-year="1">
+        1st Year
+        <i class="fas fa-chevron-up"></i>
+      </button>
+      <button class="year-btn" data-year="2">
+        2nd Year
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <button class="year-btn" data-year="3">
+        3rd & 4th Year
+        <i class="fas fa-chevron-down"></i>
+      </button>
+    </div>
+    
+    <div class="prizes-container fade-in" id="prizes-container">
+      <div class="prize-card second">
+        <div class="trophy">
+          <i class="fas fa-trophy"></i>
+          <div class="trophy-glow"></div>
         </div>
-        
-        <div class="prize-card first">
-          <div class="trophy">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <h3>1st Prize</h3>
-          <div class="prize-amount">To be Revealed</div>
-        </div>
-        
-        <div class="prize-card third">
-          <div class="trophy">
-            <i class="fas fa-trophy"></i>
-          </div>
-          <h3>3rd Prize</h3>
-          <div class="prize-amount">To be Revealed</div>
+        <h3>2nd Prize</h3>
+        <div class="prize-amount">
+          <span class="prize-currency">₹</span>
+          <span class="prize-value" id="second-prize">0</span>
         </div>
       </div>
-
+      
+      <div class="prize-card first">
+        <div class="trophy">
+          <i class="fas fa-trophy"></i>
+          <div class="trophy-glow"></div>
+        </div>
+        <h3>1st Prize</h3>
+        <div class="prize-amount">
+          <span class="prize-currency">₹</span>
+          <span class="prize-value" id="first-prize">0</span>
+        </div>
+      </div>
+      
+      <div class="prize-card third">
+        <div class="trophy">
+          <i class="fas fa-trophy"></i>
+          <div class="trophy-glow"></div>
+        </div>
+        <h3>3rd Prize</h3>
+        <div class="prize-amount">
+          <span class="prize-currency">₹</span>
+          <span class="prize-value" id="third-prize">0</span>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
