@@ -469,5 +469,100 @@ document.addEventListener("DOMContentLoaded", () => {
     let the
     let character
   })
+
+// Add this code to your existing script.js file
+
+// Prize animation functions
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize prize year buttons
+  const yearButtons = document.querySelectorAll(".year-btn")
+  if (yearButtons.length > 0) {
+    yearButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const year = this.getAttribute("data-year")
+        changePrizeYear(year)
+      })
+    })
+
+    // Initialize with animation for first year
+    setTimeout(() => {
+      animateValue("first-prize", 0, 4000, 1500)
+      animateValue("second-prize", 0, 3000, 1500)
+      animateValue("third-prize", 0, 2000, 1500)
+    }, 500)
+  }
+})
+
+// Function to change prize year
+function changePrizeYear(year) {
+  const yearButtons = document.querySelectorAll(".year-btn")
+  const prizesContainer = document.getElementById("prizes-container")
+
+  if (!prizesContainer) return
+
+  // Update active button
+  yearButtons.forEach((btn) => {
+    const btnYear = btn.getAttribute("data-year")
+    if (btnYear === year) {
+      btn.classList.add("active")
+      const icon = btn.querySelector("i")
+      icon.classList.remove("fa-chevron-down")
+      icon.classList.add("fa-chevron-up")
+    } else {
+      btn.classList.remove("active")
+      const icon = btn.querySelector("i")
+      icon.classList.remove("fa-chevron-up")
+      icon.classList.add("fa-chevron-down")
+    }
+  })
+
+  // Animate prize change
+  prizesContainer.classList.remove("fade-in")
+  prizesContainer.classList.add("fade-out")
+
+  setTimeout(() => {
+    // All years have the same prize structure, so we don't need to change values
+    // But in a real implementation, you would update these values based on the year
+
+    // Animate counting up
+    animateValue("first-prize", 0, 4000, 1500)
+    animateValue("second-prize", 0, 3000, 1500)
+    animateValue("third-prize", 0, 2000, 1500)
+
+    prizesContainer.classList.remove("fade-out")
+    prizesContainer.classList.add("fade-in")
+  }, 300)
+}
+
+// Function to animate counting up
+function animateValue(id, start, end, duration) {
+  const obj = document.getElementById(id)
+  if (!obj) return
+
+  const range = end - start
+  const minTimer = 50
+  let stepTime = Math.abs(Math.floor(duration / range))
+
+  stepTime = Math.max(stepTime, minTimer)
+
+  const startTime = new Date().getTime()
+  const endTime = startTime + duration
+  let timer
+
+  function run() {
+    const now = new Date().getTime()
+    const remaining = Math.max((endTime - now) / duration, 0)
+    const value = Math.round(end - remaining * range)
+    obj.innerHTML = value.toLocaleString()
+    if (value === end) {
+      clearInterval(timer)
+    }
+  }
+
+  timer = setInterval(run, stepTime)
+  run()
+}
+
+
   
   
